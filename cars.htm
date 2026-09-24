@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cars | DriveEase</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Drive<span>Ease</span>
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.htm">
+                Dashboard
+            </a>
+
+            <a href="cars.htm" class="active">
+                Cars
+            </a>
+
+            <a href="my_bookings.htm">
+                My Bookings
+            </a>
+
+            <a href="about.htm">
+                About
+            </a>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <a href="profile.htm" class="profile-link">
+                Profile
+            </a>
+
+            <a href="#" class="register-btn" onclick="logout()">
+    Logout
+</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= CARS HEADER ================= -->
+
+    <main class="cars-page">
+
+        <section class="cars-header">
+
+            <div>
+
+                <p class="small-heading">
+                    OUR FLEET
+                </p>
+
+                <h1>
+                    Find your<br>
+                    <span>perfect ride.</span>
+                </h1>
+
+                <p>
+                    Choose from our collection of comfortable,
+                    reliable and stylish cars.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FILTER BAR ================= -->
+
+        <section class="car-filter-section">
+
+            <div class="filter-label">
+                FILTER BY
+            </div>
+
+
+            <div class="filter-options">
+
+                <button class="filter-btn active-filter">
+                    All Cars
+                </button>
+
+                <button class="filter-btn">
+                    Hatchback
+                </button>
+
+                <button class="filter-btn">
+                    Sedan
+                </button>
+
+                <button class="filter-btn">
+                    SUV
+                </button>
+
+                <button class="filter-btn">
+                    Luxury
+                </button>
+
+            </div>
+
+
+            <div class="sort-section">
+
+                <label for="sort">
+                    Sort
+                </label>
+
+                <select id="sort">
+
+                    <option>
+                        Recommended
+                    </option>
+
+                    <option>
+                        Price: Low to High
+                    </option>
+
+                    <option>
+                        Price: High to Low
+                    </option>
+
+                    <option>
+                        Name
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CAR GRID ================= -->
+
+        <section class="cars-grid">
+
+
+
+            <!-- ================= CAR 1 ================= -->
+
+            <div class="car-card">
+
+                <div class="car-image">
+
+                    <span>
+                        CAR IMAGE
+                    </span>
+
+                    <div class="car-tag">
+                        POPULAR
+                    </div>
+
+                </div>
+
+
+                <div class="car-details">
+
+                    <p class="car-category">
+                        SUV
+                    </p>
+
+                    <h2>
+                        Hyundai Creta
+                    </h2>
+
+                    <p class="car-description">
+                        Comfortable SUV suitable for city
+                        drives and long journeys.
+                    </p>
+
+
+                    <div class="car-specs">
+
+                        <span>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            Automatic
+                        </span>
+
+                        <span>
+                            Petrol
+                        </span>
+
+                    </div>
+
+
+                    <div class="car-price-row">
+
+                        <div>
+
+                            <strong>
+                                ₹1,500
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+                        <a href="booking.htm" class="book-car-btn">
+                            Book →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CAR 2 ================= -->
+
+            <div class="car-card">
+
+                <div class="car-image">
+
+                    <span>
+                        CAR IMAGE
+                    </span>
+
+                </div>
+
+
+                <div class="car-details">
+
+                    <p class="car-category">
+                        SEDAN
+                    </p>
+
+                    <h2>
+                        Honda City
+                    </h2>
+
+                    <p class="car-description">
+                        Refined sedan offering a smooth and
+                        comfortable driving experience.
+                    </p>
+
+
+                    <div class="car-specs">
+
+                        <span>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            Automatic
+                        </span>
+
+                        <span>
+                            Petrol
+                        </span>
+
+                    </div>
+
+
+                    <div class="car-price-row">
+
+                        <div>
+
+                            <strong>
+                                ₹1,300
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+                        <a href="booking.htm" class="book-car-btn">
+                            Book →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CAR 3 ================= -->
+
+            <div class="car-card">
+
+                <div class="car-image">
+
+                    <span>
+                        CAR IMAGE
+                    </span>
+
+                </div>
+
+
+                <div class="car-details">
+
+                    <p class="car-category">
+                        HATCHBACK
+                    </p>
+
+                    <h2>
+                        Tata Altroz
+                    </h2>
+
+                    <p class="car-description">
+                        Compact and practical car for everyday
+                        city travel.
+                    </p>
+
+
+                    <div class="car-specs">
+
+                        <span>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            Manual
+                        </span>
+
+                        <span>
+                            Petrol
+                        </span>
+
+                    </div>
+
+
+                    <div class="car-price-row">
+
+                        <div>
+
+                            <strong>
+                                ₹900
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+                        <a href="booking.htm" class="book-car-btn">
+                            Book →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CAR 4 ================= -->
+
+            <div class="car-card">
+
+                <div class="car-image">
+
+                    <span>
+                        CAR IMAGE
+                    </span>
+
+                </div>
+
+
+                <div class="car-details">
+
+                    <p class="car-category">
+                        SUV
+                    </p>
+
+                    <h2>
+                        Kia Seltos
+                    </h2>
+
+                    <p class="car-description">
+                        Stylish SUV with a spacious interior
+                        and modern features.
+                    </p>
+
+
+                    <div class="car-specs">
+
+                        <span>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            Automatic
+                        </span>
+
+                        <span>
+                            Diesel
+                        </span>
+
+                    </div>
+
+
+                    <div class="car-price-row">
+
+                        <div>
+
+                            <strong>
+                                ₹1,700
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+                        <a href="booking.htm" class="book-car-btn">
+                            Book →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CAR 5 ================= -->
+
+            <div class="car-card">
+
+                <div class="car-image">
+
+                    <span>
+                        CAR IMAGE
+                    </span>
+
+                </div>
+
+
+                <div class="car-details">
+
+                    <p class="car-category">
+                        SEDAN
+                    </p>
+
+                    <h2>
+                        Skoda Slavia
+                    </h2>
+
+                    <p class="car-description">
+                        Spacious sedan designed for comfortable
+                        longer journeys.
+                    </p>
+
+
+                    <div class="car-specs">
+
+                        <span>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            Automatic
+                        </span>
+
+                        <span>
+                            Petrol
+                        </span>
+
+                    </div>
+
+
+                    <div class="car-price-row">
+
+                        <div>
+
+                            <strong>
+                                ₹1,600
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+                        <a href="booking.htm" class="book-car-btn">
+                            Book →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CAR 6 ================= -->
+
+            <div class="car-card">
+
+                <div class="car-image">
+
+                    <span>
+                        CAR IMAGE
+                    </span>
+
+                </div>
+
+
+                <div class="car-details">
+
+                    <p class="car-category">
+                        LUXURY
+                    </p>
+
+                    <h2>
+                        BMW 3 Series
+                    </h2>
+
+                    <p class="car-description">
+                        Premium sedan for a sophisticated
+                        and comfortable journey.
+                    </p>
+
+
+                    <div class="car-specs">
+
+                        <span>
+                            5 Seats
+                        </span>
+
+                        <span>
+                            Automatic
+                        </span>
+
+                        <span>
+                            Petrol
+                        </span>
+
+                    </div>
+
+
+                    <div class="car-price-row">
+
+                        <div>
+
+                            <strong>
+                                ₹4,500
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+                        <a href="booking.htm" class="book-car-btn">
+                            Book →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Drive<span>Ease</span>
+        </div>
+
+        <p>
+            Simple rentals. Better journeys.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="dashboard.htm">
+                Dashboard
+            </a>
+
+            <a href="cars.htm">
+                Cars
+            </a>
+
+            <a href="booking.htm">
+                Bookings
+            </a>
+
+            <a href="about.htm">
+                About
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 DriveEase. All rights reserved.
+        </p>
+
+    </footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

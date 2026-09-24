@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | DriveEase</title>
+
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            DriveEase
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.htm">
+                Dashboard
+            </a>
+
+            <a href="cars.htm">
+                Cars
+            </a>
+
+            <a href="my_bookings.htm">
+                My Bookings
+            </a>
+
+            <a href="index.htm#about">
+                About
+            </a>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <a
+                href="profile.htm"
+                class="profile-link active">
+                Profile
+            </a>
+
+            <a href="#" class="register-btn" onclick="logout()">
+    Logout
+</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= PROFILE PAGE ================= -->
+
+    <main class="profile-page">
+
+
+        <!-- HEADER -->
+
+        <div class="profile-header">
+
+            <p class="small-heading">
+                YOUR ACCOUNT.
+            </p>
+
+            <h1>
+                Your <span>profile.</span>
+            </h1>
+
+            <p>
+                Manage your personal information
+                and account details.
+            </p>
+
+        </div>
+
+
+        <!-- PROFILE CONTENT -->
+
+        <div class="profile-container">
+
+
+            <!-- ================= PROFILE CARD ================= -->
+
+            <div class="profile-card">
+
+
+                <!-- PROFILE TOP -->
+
+                <div class="profile-top">
+
+    <div class="profile-avatar">
+        <span>U</span>
+    </div>
+
+    <div class="profile-name">
+
+        <h2>User</h2>
+
+        <p>
+            DriveEase Member
+        </p>
+
+    </div>
+
+</div>
+
+
+                <!-- PROFILE INFORMATION -->
+<div class="profile-info">
+
+    <div class="profile-info-item">
+
+        <span>
+            FULL NAME
+        </span>
+
+        <strong>
+            User
+        </strong>
+
+    </div>
+
+
+    <div class="profile-info-item">
+
+        <span>
+            EMAIL ADDRESS
+        </span>
+
+        <strong>
+            user@example.com
+        </strong>
+
+    </div>
+
+
+    <div class="profile-info-item">
+
+        <span>
+            PHONE NUMBER
+        </span>
+
+        <strong>
+            +91 98765 43210
+        </strong>
+
+    </div>
+
+
+    <div class="profile-info-item">
+
+        <span>
+            MEMBER SINCE
+        </span>
+
+        <strong>
+            September 2026
+        </strong>
+
+    </div>
+
+</div>
+
+
+                <!-- EDIT BUTTON -->
+
+                <button
+                    class="profile-edit-btn"
+                    onclick="editProfile()">
+
+                    Edit Profile →
+
+                </button>
+
+            </div>
+
+
+            <!-- ================= ACCOUNT SETTINGS ================= -->
+
+            <div class="profile-settings">
+
+
+                <p class="form-label">
+                    ACCOUNT
+                </p>
+
+                <h2>
+                    Account settings
+                </h2>
+
+
+                <!-- SETTING 1 -->
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <strong>
+                            Personal Information
+                        </strong>
+
+                        <p>
+                            Update your name, email
+                            and phone number.
+                        </p>
+
+                    </div>
+
+                    <button
+                        onclick="editProfile()">
+                        →
+                    </button>
+
+                </div>
+
+
+                <!-- SETTING 2 -->
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <strong>
+                            Booking History
+                        </strong>
+
+                        <p>
+                            View all your previous
+                            car rentals.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="my_bookings.htm">
+                        →
+                    </a>
+
+                </div>
+
+
+                <!-- SETTING 3 -->
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <strong>
+                            Password
+                        </strong>
+
+                        <p>
+                            Change your account password.
+                        </p>
+
+                    </div>
+
+                    <button
+                        onclick="changePassword()">
+                        →
+                    </button>
+
+                </div>
+
+
+                <!-- SETTING 4 -->
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <strong>
+                            Logout
+                        </strong>
+
+                        <p>
+                            Sign out of your DriveEase
+                            account.
+                        </p>
+
+                    </div>
+
+                    <a href="login.htm">
+                        →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DANGER AREA ================= -->
+
+        <div class="profile-danger">
+
+            <div>
+
+                <h3>
+                    Need help?
+                </h3>
+
+                <p>
+                    Contact DriveEase support if
+                    you have any questions.
+                </p>
+
+            </div>
+
+
+            <button
+                onclick="contactSupport()"
+                class="outline-btn">
+
+                Contact Support
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            DriveEase
+        </div>
+
+        <p>
+            Simple car rentals. Better journeys.
+        </p>
+
+        <p>
+            © 2026 DriveEase. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+   <script>
+
+    const savedName = localStorage.getItem("userName");
+
+    const userName = savedName || "User";
+
+    document.getElementById("profileName").textContent = userName;
+
+    document.getElementById("displayName").textContent = userName;
+
+    document.getElementById("avatarLetter").textContent =
+        userName.charAt(0).toUpperCase();
+
+
+    function editProfile() {
+
+        const currentName =
+            document.getElementById("displayName").textContent;
+
+        const newName =
+            prompt("Enter your full name:", currentName);
+
+        if (newName && newName.trim() !== "") {
+
+            const updatedName = newName.trim();
+
+            localStorage.setItem("userName", updatedName);
+
+            document.getElementById("profileName").textContent =
+                updatedName;
+
+            document.getElementById("displayName").textContent =
+                updatedName;
+
+            document.getElementById("avatarLetter").textContent =
+                updatedName.charAt(0).toUpperCase();
+        }
+    }
+
+
+    function changePassword() {
+
+        alert(
+            "Password change will be connected to the backend later."
+        );
+
+    }
+
+
+    function contactSupport() {
+
+        alert(
+            "DriveEase Support: support@driveease.com"
+        );
+
+    }
+
+</script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

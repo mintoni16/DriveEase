@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | DriveEase</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Drive<span>Ease</span>
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.htm" class="active">
+                Dashboard
+            </a>
+
+            <a href="cars.htm">
+                Cars
+            </a>
+
+            <a href="booking.htm">
+                My Bookings
+            </a>
+
+            <a href="about.htm">
+                About
+            </a>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <a href="profile.htm" class="profile-link">
+                Profile
+            </a>
+
+            <a href="#" class="register-btn" onclick="logout()">
+    Logout
+</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard">
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="dashboard-welcome">
+
+            <div>
+
+                <p class="small-heading">
+                    YOUR DASHBOARD
+                </p>
+
+                <h1>
+                 Welcome back,<br>
+                   <span id="userName">User.</span>
+                </h1>
+
+                <p class="dashboard-description">
+                    Manage your rentals, explore available cars
+                    and plan your next journey.
+                </p>
+
+            </div>
+
+
+            <a href="cars.htm" class="dashboard-main-btn">
+                Find a Car →
+            </a>
+
+        </section>
+
+
+
+        <!-- ================= QUICK STATS ================= -->
+
+        <section class="dashboard-stats">
+
+            <div class="dashboard-stat">
+
+                <span class="stat-number">
+                    02
+                </span>
+
+                <p>
+                    Total Bookings
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-stat">
+
+                <span class="stat-number">
+                    01
+                </span>
+
+                <p>
+                    Active Booking
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-stat">
+
+                <span class="stat-number">
+                    01
+                </span>
+
+                <p>
+                    Completed Trips
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-stat">
+
+                <span class="stat-number">
+                    00
+                </span>
+
+                <p>
+                    Cancelled
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CURRENT BOOKING ================= -->
+
+        <section class="current-booking">
+
+            <div class="dashboard-section-heading">
+
+                <div>
+
+                    <p>
+                        CURRENT BOOKING
+                    </p>
+
+                    <h2>
+                        Your upcoming ride
+                    </h2>
+
+                </div>
+
+                <a href="booking.htm">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="booking-card">
+
+                <div class="booking-car-image">
+                    <span>
+                        CAR IMAGE
+                    </span>
+                </div>
+
+
+                <div class="booking-info">
+
+                    <div class="booking-status">
+                        CONFIRMED
+                    </div>
+
+                    <h3>
+                        Hyundai Creta
+                    </h3>
+
+                    <p class="booking-details">
+                        Automatic &nbsp; • &nbsp; Petrol &nbsp; • &nbsp; 5 Seats
+                    </p>
+
+                    <div class="booking-dates">
+
+                        <div>
+
+                            <span>
+                                PICKUP
+                            </span>
+
+                            <strong>
+                                28 SEP 2026
+                            </strong>
+
+                            <p>
+                                Pune
+                            </p>
+
+                        </div>
+
+
+                        <div class="date-arrow">
+                            →
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                RETURN
+                            </span>
+
+                            <strong>
+                                30 SEP 2026
+                            </strong>
+
+                            <p>
+                                Pune
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="booking-price">
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <strong>
+                        ₹4,500
+                    </strong>
+
+                    <a href="booking.htm">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= EXPLORE CARS ================= -->
+
+        <section class="dashboard-cars">
+
+            <div class="dashboard-section-heading">
+
+                <div>
+
+                    <p>
+                        EXPLORE
+                    </p>
+
+                    <h2>
+                        Find your next ride
+                    </h2>
+
+                </div>
+
+                <a href="cars.htm">
+                    View all cars →
+                </a>
+
+            </div>
+
+
+            <div class="dashboard-car-grid">
+
+
+                <!-- CAR 1 -->
+
+                <div class="dashboard-car-card">
+
+                    <div class="dashboard-car-image">
+                        <span>
+                            CAR IMAGE
+                        </span>
+                    </div>
+
+                    <div class="dashboard-car-info">
+
+                        <p class="car-type">
+                            SUV
+                        </p>
+
+                        <h3>
+                            Hyundai Creta
+                        </h3>
+
+                        <div class="car-bottom">
+
+                            <span>
+                                ₹1,500/day
+                            </span>
+
+                            <a href="cars.htm">
+                                View →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CAR 2 -->
+
+                <div class="dashboard-car-card">
+
+                    <div class="dashboard-car-image">
+                        <span>
+                            CAR IMAGE
+                        </span>
+                    </div>
+
+                    <div class="dashboard-car-info">
+
+                        <p class="car-type">
+                            SEDAN
+                        </p>
+
+                        <h3>
+                            Honda City
+                        </h3>
+
+                        <div class="car-bottom">
+
+                            <span>
+                                ₹1,300/day
+                            </span>
+
+                            <a href="cars.htm">
+                                View →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CAR 3 -->
+
+                <div class="dashboard-car-card">
+
+                    <div class="dashboard-car-image">
+                        <span>
+                            CAR IMAGE
+                        </span>
+                    </div>
+
+                    <div class="dashboard-car-info">
+
+                        <p class="car-type">
+                            HATCHBACK
+                        </p>
+
+                        <h3>
+                            Tata Altroz
+                        </h3>
+
+                        <div class="car-bottom">
+
+                            <span>
+                                ₹900/day
+                            </span>
+
+                            <a href="cars.htm">
+                                View →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="quick-actions">
+
+            <div class="quick-action">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Browse Cars
+                </h3>
+
+                <p>
+                    Explore our available vehicles.
+                </p>
+
+                <a href="cars.htm">
+                    Explore →
+                </a>
+
+            </div>
+
+
+            <div class="quick-action">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    My Bookings
+                </h3>
+
+                <p>
+                    Check your upcoming and past rentals.
+                </p>
+
+                <a href="booking.htm">
+                    View Bookings →
+                </a>
+
+            </div>
+
+
+            <div class="quick-action">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    My Profile
+                </h3>
+
+                <p>
+                    Update your account information.
+                </p>
+
+                <a href="profile.htm">
+                    View Profile →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Drive<span>Ease</span>
+        </div>
+
+        <p>
+            Simple rentals. Better journeys.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="dashboard.htm">
+                Dashboard
+            </a>
+
+            <a href="cars.htm">
+                Cars
+            </a>
+
+            <a href="booking.htm">
+                Bookings
+            </a>
+
+            <a href="about.htm">
+                About
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 DriveEase. All rights reserved.
+        </p>
+
+    </footer>
+
+<script>
+    const userName = localStorage.getItem("userName");
+
+    if (userName) {
+        document.getElementById("userName").textContent = userName + ".";
+    }
+</script>
+<script src="script.js"></script>
+</body>
+
+</html>

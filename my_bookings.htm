@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookings | DriveEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            DriveEase
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.htm">
+                Dashboard
+            </a>
+
+            <a href="cars.htm">
+                Cars
+            </a>
+
+            <a
+                href="my_bookings.htm"
+                class="active">
+                My Bookings
+            </a>
+
+            <a href="index.htm#about">
+                About
+            </a>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <a
+                href="profile.htm"
+                class="profile-link">
+                Profile
+            </a>
+
+            <a href="#" class="register-btn" onclick="logout()">
+    Logout
+</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= PAGE ================= -->
+
+    <main class="my-bookings-page">
+
+
+        <!-- HEADER -->
+
+        <div class="bookings-header">
+
+            <div>
+
+                <p class="small-heading">
+                    YOUR JOURNEY.
+                </p>
+
+                <h1>
+                    My <span>bookings.</span>
+                </h1>
+
+                <p>
+                    View and manage all your
+                    DriveEase bookings.
+                </p>
+
+            </div>
+
+
+            <a
+                href="cars.htm"
+                class="primary-btn">
+                Book a Car →
+            </a>
+
+        </div>
+
+
+        <!-- ================= UPCOMING ================= -->
+
+        <section class="bookings-section">
+
+            <div class="section-title-row">
+
+                <h2>
+                    Upcoming Booking
+                </h2>
+
+                <span class="booking-status">
+                    CONFIRMED
+                </span>
+
+            </div>
+
+
+            <div
+                class="my-booking-card"
+                id="bookingCard">
+
+
+                <!-- CAR IMAGE -->
+
+                <div class="my-booking-image">
+
+                    <span>
+                        CAR IMAGE
+                    </span>
+
+                </div>
+
+
+                <!-- DETAILS -->
+
+                <div class="my-booking-details">
+
+                    <div>
+
+                        <p class="car-category">
+                            SUV
+                        </p>
+
+                        <h2>
+                            Hyundai Creta
+                        </h2>
+
+                    </div>
+
+
+                    <div class="booking-info-grid">
+
+
+                        <div>
+
+                            <span>
+                                PICKUP
+                            </span>
+
+                            <strong
+                                id="pickupDateDisplay">
+                                28 Sep 2026
+                            </strong>
+
+                            <small
+                                id="pickupLocationDisplay">
+                                Pune
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                RETURN
+                            </span>
+
+                            <strong
+                                id="returnDateDisplay">
+                                30 Sep 2026
+                            </strong>
+
+                            <small>
+                                Pune
+                            </small>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                TOTAL
+                            </span>
+
+                            <strong
+                                id="bookingPriceDisplay">
+                                ₹4,500
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="booking-actions">
+
+                        <button
+                            class="outline-btn"
+                            onclick="cancelBooking()">
+                            Cancel Booking
+                        </button>
+
+                        <button
+                            class="primary-small-btn"
+                            onclick="viewBooking()">
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PAST BOOKINGS ================= -->
+
+        <section class="bookings-section">
+
+            <div class="section-title-row">
+
+                <h2>
+                    Past Bookings
+                </h2>
+
+            </div>
+
+
+            <div class="past-bookings">
+
+
+                <!-- BOOKING 1 -->
+
+                <div class="past-booking-card">
+
+                    <div class="past-car-image">
+
+                        <span>
+                            CAR IMAGE
+                        </span>
+
+                    </div>
+
+
+                    <div class="past-booking-info">
+
+                        <div>
+
+                            <p class="car-category">
+                                SEDAN
+                            </p>
+
+                            <h3>
+                                Honda City
+                            </h3>
+
+                        </div>
+
+
+                        <div class="past-booking-date">
+
+                            <span>
+                                12 AUG 2026
+                            </span>
+
+                            <strong>
+                                ₹2,600
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="completed-status">
+                        COMPLETED
+                    </span>
+
+                </div>
+
+
+                <!-- BOOKING 2 -->
+
+                <div class="past-booking-card">
+
+                    <div class="past-car-image">
+
+                        <span>
+                            CAR IMAGE
+                        </span>
+
+                    </div>
+
+
+                    <div class="past-booking-info">
+
+                        <div>
+
+                            <p class="car-category">
+                                HATCHBACK
+                            </p>
+
+                            <h3>
+                                Tata Altroz
+                            </h3>
+
+                        </div>
+
+
+                        <div class="past-booking-date">
+
+                            <span>
+                                03 JUL 2026
+                            </span>
+
+                            <strong>
+                                ₹1,800
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="completed-status">
+                        COMPLETED
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EMPTY MESSAGE ================= -->
+
+        <section class="booking-bottom">
+
+            <div>
+
+                <h2>
+                    Looking for your next ride?
+                </h2>
+
+                <p>
+                    Explore our fleet and find a car
+                    that fits your journey.
+                </p>
+
+            </div>
+
+
+            <a
+                href="cars.htm"
+                class="secondary-btn">
+                Explore Cars →
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            DriveEase
+        </div>
+
+        <p>
+            Simple car rentals. Better journeys.
+        </p>
+
+        <p>
+            © 2026 DriveEase. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const savedBooking =
+            localStorage.getItem(
+                "currentBooking"
+            );
+
+
+        if (savedBooking) {
+
+            const booking =
+                JSON.parse(savedBooking);
+
+
+            document.getElementById(
+                "pickupDateDisplay"
+            ).textContent =
+                formatDate(
+                    booking.pickupDate
+                );
+
+
+            document.getElementById(
+                "returnDateDisplay"
+            ).textContent =
+                formatDate(
+                    booking.returnDate
+                );
+
+
+            document.getElementById(
+                "pickupLocationDisplay"
+            ).textContent =
+                booking.pickupLocation;
+
+
+            document.getElementById(
+                "bookingPriceDisplay"
+            ).textContent =
+                booking.price;
+
+        }
+
+
+        function formatDate(dateString) {
+
+            if (!dateString) {
+                return "28 Sep 2026";
+            }
+
+            const date =
+                new Date(dateString);
+
+            return date.toLocaleDateString(
+                "en-GB",
+                {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                }
+            );
+
+        }
+
+
+        function cancelBooking() {
+
+            const confirmCancel =
+                confirm(
+                    "Are you sure you want to cancel this booking?"
+                );
+
+
+            if (confirmCancel) {
+
+                localStorage.removeItem(
+                    "currentBooking"
+                );
+
+                document.getElementById(
+                    "bookingCard"
+                ).style.display = "none";
+
+                alert(
+                    "Booking cancelled successfully."
+                );
+
+            }
+
+        }
+
+
+        function viewBooking() {
+
+            alert(
+                "Booking details will be available here."
+            );
+
+        }
+
+    </script>
+<script src="script.js"></script>
+</body>
+
+</html>

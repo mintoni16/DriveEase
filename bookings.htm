@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Car | DriveEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            DriveEase
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.htm">Dashboard</a>
+
+            <a href="cars.htm">Cars</a>
+
+            <a href="my_bookings.htm">My Bookings</a>
+
+            <a href="index.htm#about">About</a>
+
+        </div>
+
+        <div class="nav-right">
+
+            <a href="profile.htm" class="profile-link">
+                Profile
+            </a>
+
+            <a href="login.htm" class="register-btn">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= BOOKING PAGE ================= -->
+
+    <main class="booking-page">
+
+        <!-- PAGE HEADING -->
+
+        <div class="booking-heading">
+
+            <p class="small-heading">
+                RESERVE YOUR RIDE.
+            </p>
+
+            <h1>
+                Book your<br>
+                <span>perfect car.</span>
+            </h1>
+
+            <p>
+                Choose your dates and pickup location
+                to complete your booking.
+            </p>
+
+        </div>
+
+
+        <!-- BOOKING CONTENT -->
+
+        <div class="booking-container">
+
+
+            <!-- ================= CAR DETAILS ================= -->
+
+            <div class="booking-car-card">
+
+                <div class="booking-car-image">
+
+                    <span>
+                        CAR IMAGE
+                    </span>
+
+                </div>
+
+
+                <div class="booking-car-details">
+
+                    <p class="car-category">
+                        SUV
+                    </p>
+
+                    <h2>
+                        Hyundai Creta
+                    </h2>
+
+                    <p class="booking-car-description">
+                        Comfortable, spacious and perfect
+                        for city drives and weekend trips.
+                    </p>
+
+
+                    <div class="booking-specs">
+
+                        <div>
+
+                            <strong>
+                                5
+                            </strong>
+
+                            <span>
+                                Seats
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Automatic
+                            </strong>
+
+                            <span>
+                                Transmission
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Petrol
+                            </strong>
+
+                            <span>
+                                Fuel
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="booking-price">
+
+                        <span>
+                            ₹1,500
+                        </span>
+
+                        <small>
+                            / day
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= FORM ================= -->
+
+            <div class="booking-form-card">
+
+                <p class="form-label">
+                    BOOKING DETAILS
+                </p>
+
+                <h2>
+                    Choose your dates
+                </h2>
+
+
+                <form id="bookingForm">
+
+
+                    <!-- DATES -->
+
+                    <div class="booking-form-row">
+
+
+                        <div class="booking-field">
+
+                            <label for="pickupDate">
+                                Pickup Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="pickupDate"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="booking-field">
+
+                            <label for="returnDate">
+                                Return Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="returnDate"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- PICKUP LOCATION -->
+
+                    <div class="booking-field">
+
+                        <label for="pickupLocation">
+                            Pickup Location
+                        </label>
+
+                        <select
+                            id="pickupLocation"
+                            required
+                        >
+
+                            <option value="">
+                                Select location
+                            </option>
+
+                            <option value="Pune">
+                                Pune
+                            </option>
+
+                            <option value="Mumbai">
+                                Mumbai
+                            </option>
+
+                            <option value="Nashik">
+                                Nashik
+                            </option>
+
+                            <option value="Bengaluru">
+                                Bengaluru
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DROP LOCATION -->
+
+                    <div class="booking-field">
+
+                        <label for="dropLocation">
+                            Drop-off Location
+                        </label>
+
+                        <select
+                            id="dropLocation"
+                            required
+                        >
+
+                            <option value="">
+                                Select location
+                            </option>
+
+                            <option value="Pune">
+                                Pune
+                            </option>
+
+                            <option value="Mumbai">
+                                Mumbai
+                            </option>
+
+                            <option value="Nashik">
+                                Nashik
+                            </option>
+
+                            <option value="Bengaluru">
+                                Bengaluru
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- BOOKING SUMMARY -->
+
+                    <div class="booking-summary">
+
+                        <div>
+
+                            <span>
+                                Car
+                            </span>
+
+                            <strong>
+                                Hyundai Creta
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Rate
+                            </span>
+
+                            <strong>
+                                ₹1,500 / day
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="totalAmount">
+                                ₹1,500
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="booking-submit"
+                    >
+                        Confirm Booking →
+                    </button>
+
+
+                    <p class="booking-note">
+
+                        Your booking details will be
+                        saved to your account.
+
+                    </p>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            DriveEase
+        </div>
+
+        <p>
+            Simple car rentals. Better journeys.
+        </p>
+
+        <p>
+            © 2026 DriveEase. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const pickupDate =
+            document.getElementById("pickupDate");
+
+        const returnDate =
+            document.getElementById("returnDate");
+
+        const totalAmount =
+            document.getElementById("totalAmount");
+
+        const bookingForm =
+            document.getElementById("bookingForm");
+
+        const pricePerDay = 1500;
+
+
+        /* SET MINIMUM DATE */
+
+        const today =
+            new Date().toISOString().split("T")[0];
+
+        pickupDate.min = today;
+        returnDate.min = today;
+
+
+        /* CALCULATE TOTAL */
+
+        function calculateTotal() {
+
+            if (
+                pickupDate.value &&
+                returnDate.value
+            ) {
+
+                const start =
+                    new Date(pickupDate.value);
+
+                const end =
+                    new Date(returnDate.value);
+
+                const difference =
+                    (end - start) /
+                    (1000 * 60 * 60 * 24);
+
+
+                if (difference > 0) {
+
+                    const total =
+                        difference * pricePerDay;
+
+                    totalAmount.textContent =
+                        "₹" +
+                        total.toLocaleString("en-IN");
+
+                }
+
+                else {
+
+                    totalAmount.textContent =
+                        "₹1,500";
+
+                }
+
+            }
+
+        }
+
+
+        pickupDate.addEventListener(
+            "change",
+            calculateTotal
+        );
+
+        returnDate.addEventListener(
+            "change",
+            calculateTotal
+        );
+
+
+        /* BOOKING */
+
+        bookingForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+                const booking = {
+
+                    car: "Hyundai Creta",
+
+                    pickupDate:
+                        pickupDate.value,
+
+                    returnDate:
+                        returnDate.value,
+
+                    pickupLocation:
+                        document.getElementById(
+                            "pickupLocation"
+                        ).value,
+
+                    dropLocation:
+                        document.getElementById(
+                            "dropLocation"
+                        ).value,
+
+                    price:
+                        totalAmount.textContent
+
+                };
+
+
+                localStorage.setItem(
+                    "currentBooking",
+                    JSON.stringify(booking)
+                );
+
+
+                alert(
+                    "Booking confirmed successfully!"
+                );
+
+
+                window.location.href =
+                    "my_bookings.htm";
+
+            }
+        );
+
+    </script>
+<script src="script.js"></script>
+</body>
+
+</html>

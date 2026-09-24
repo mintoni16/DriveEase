@@ -1,0 +1,3590 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f0e8;
+    color: #111111;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 92%;
+    margin: 25px auto 0;
+
+    padding: 18px 25px;
+
+    background: white;
+    border: 1.5px solid #111111;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a,
+.footer-links a {
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a {
+    padding: 7px 10px;
+}
+
+
+/* Selected / Hover */
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #d8e8a8;
+    border: 1px solid #111111;
+    padding: 6px 10px;
+}
+
+
+/* =========================
+   NAVBAR RIGHT
+========================= */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+    text-decoration: none;
+    color: #111111;
+    font-size: 14px;
+    padding: 9px 16px;
+}
+
+.login-btn:hover {
+    background: #f3c7d8;
+    border: 1px solid #111111;
+}
+
+.register-btn {
+    background: #111111;
+    color: white;
+    border: 1px solid #111111;
+    border-radius: 25px;
+}
+
+.register-btn:hover {
+    background: #d8e8a8;
+    color: #111111;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    width: 92%;
+    margin: 70px auto 80px;
+
+    min-height: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    align-items: center;
+}
+
+.hero-content {
+    min-width: 0;
+}
+
+.small-heading {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   HERO HEADING
+========================= */
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(60px, 7vw, 105px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin: 25px 0 30px;
+}
+
+
+/*
+   IMPORTANT:
+   display:block prevents the coloured
+   second line from overlapping.
+*/
+
+.hero h1 span {
+    display: block;
+
+    width: fit-content;
+
+    margin-top: 12px;
+
+    padding: 0 14px 5px;
+
+    background: #d8e8a8;
+
+    border: 1.5px solid #111111;
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-text {
+    max-width: 520px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #555555;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 13px 22px;
+
+    border: 1.5px solid #111111;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.primary-btn {
+    background: #111111;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #d8e8a8;
+    color: #111111;
+}
+
+.secondary-btn {
+    color: #111111;
+    background: white;
+}
+
+.secondary-btn:hover {
+    background: #f3c7d8;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+    height: 450px;
+}
+
+.car-placeholder {
+    width: 100%;
+    height: 100%;
+
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-placeholder span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   BOOKING SECTION
+========================= */
+
+.booking-section {
+    width: 92%;
+    margin: 0 auto 100px;
+}
+
+.booking-box {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 35px;
+}
+
+.booking-title {
+    margin-bottom: 30px;
+}
+
+.booking-title > p,
+.section-heading > p,
+.cta-box > p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.booking-title h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 36px;
+
+    font-weight: 500;
+
+    margin-top: 8px;
+}
+
+.booking-fields {
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr 1fr auto;
+
+    gap: 15px;
+
+    align-items: end;
+}
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.field label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.field input {
+    height: 48px;
+
+    padding: 0 13px;
+
+    border: 1.5px solid #111111;
+
+    background: #fafafa;
+
+    font-family: "DM Sans", sans-serif;
+}
+
+.field input:focus {
+    outline: none;
+
+    background: #d8e8a8;
+}
+
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.search-btn {
+    height: 48px;
+
+    padding: 0 25px;
+
+    border: 1.5px solid #111111;
+
+    background: #111111;
+
+    color: white;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #d8e8a8;
+
+    color: #111111;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.features-section,
+.how-section {
+    width: 92%;
+
+    margin: 0 auto 120px;
+}
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.feature-card {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 30px;
+
+    min-height: 260px;
+
+    transition: 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    background: #fdfbf7;
+}
+
+.feature-number {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 55px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.step {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 35px;
+}
+
+.step span {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: 1px solid #111111;
+
+    background: #f3c7d8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 40px;
+}
+
+.step h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.step p {
+    color: #666666;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section {
+    width: 92%;
+
+    margin: 0 auto 100px;
+}
+
+.cta-box {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 70px;
+}
+
+.cta-box h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 6vw, 80px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin: 20px 0 35px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: white;
+
+    border-top: 1.5px solid #111111;
+
+    padding: 45px 4%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+.footer-logo span {
+    font-weight: 400;
+}
+
+footer > p {
+    color: #666666;
+
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 25px;
+}
+
+.footer-links a:hover {
+    background: #d8e8a8;
+
+    border: 1px solid #111111;
+
+    padding: 4px 7px;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #dddddd;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .booking-fields {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 94%;
+    }
+
+    .hero,
+    .booking-section,
+    .features-section,
+    .how-section,
+    .cta-section {
+        width: 94%;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -2px;
+    }
+
+    .booking-fields,
+    .features,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-box {
+        padding: 40px 25px;
+    }
+
+    .login-btn {
+        display: none;
+    }
+}
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+    width: 92%;
+    max-width: 1250px;
+
+    min-height: 650px;
+
+    margin: 65px auto 80px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   LOGIN INTRO
+========================= */
+
+.login-intro {
+    padding-left: 20px;
+}
+
+.login-intro h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(65px, 7vw, 100px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin: 25px 0 35px;
+}
+
+.login-intro h1 span {
+    display: inline-block;
+
+    background: #d8e8a8;
+
+    border: 1.5px solid #111111;
+
+    padding: 0 14px 5px;
+}
+
+.login-description {
+    max-width: 450px;
+
+    color: #555555;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-card {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 45px;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    justify-self: end;
+}
+
+
+/* =========================
+   LOGIN CARD HEADING
+========================= */
+
+.login-card-heading {
+    margin-bottom: 35px;
+}
+
+.login-card-heading p {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.login-card-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   LOGIN FIELDS
+========================= */
+
+.login-field {
+    margin-bottom: 23px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.login-field label {
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.login-field input[type="email"],
+.login-field input[type="password"] {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 15px;
+
+    background: #fafafa;
+
+    border: 1.5px solid #111111;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Field selected */
+
+.login-field input[type="email"]:focus,
+.login-field input[type="password"]:focus {
+    outline: none;
+
+    background: #d8e8a8;
+
+    border-color: #111111;
+}
+
+
+/* =========================
+   PASSWORD LABEL
+========================= */
+
+.password-label {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.password-label a {
+    color: #111111;
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    padding: 3px 5px;
+}
+
+.password-label a:hover {
+    background: #f3c7d8;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================
+   REMEMBER ME
+========================= */
+
+.remember {
+    margin: 5px 0 25px;
+}
+
+.remember label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.remember input {
+    width: 15px;
+
+    height: 15px;
+
+    accent-color: #111111;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-submit {
+    width: 100%;
+
+    height: 52px;
+
+    border: 1.5px solid #111111;
+
+    background: #111111;
+
+    color: white;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.login-submit:hover {
+    background: #d8e8a8;
+
+    color: #111111;
+}
+
+
+/* =========================
+   CREATE ACCOUNT
+========================= */
+
+.create-account {
+    text-align: center;
+
+    margin-top: 28px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #dddddd;
+}
+
+.create-account p {
+    font-size: 13px;
+
+    color: #666666;
+}
+
+.create-account a {
+    color: #111111;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    padding: 3px 5px;
+}
+
+.create-account a:hover {
+    background: #f3c7d8;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================
+   ACTIVE LOGIN NAV
+========================= */
+
+.login-active {
+    background: #f3c7d8;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================
+   LOGIN FOOTER
+========================= */
+
+.login-footer {
+    background: white;
+
+    border-top: 1.5px solid #111111;
+
+    padding: 30px 4%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.login-footer .copyright {
+    margin: 0;
+
+    padding: 0;
+
+    border: none;
+}
+
+
+/* =========================
+   LOGIN RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .login-page {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        margin-top: 50px;
+    }
+
+    .login-intro {
+        padding-left: 0;
+    }
+
+    .login-card {
+        justify-self: start;
+
+        max-width: 600px;
+    }
+
+    .login-footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .login-page {
+        width: 94%;
+    }
+
+    .login-intro h1 {
+        font-size: 60px;
+
+        letter-spacing: -2px;
+    }
+
+    .login-card {
+        padding: 30px 25px;
+    }
+
+    .login-card-heading h2 {
+        font-size: 40px;
+    }
+
+    .login-footer {
+        padding: 30px 20px;
+    }
+}
+/* =========================
+   REGISTER PAGE
+========================= */
+
+.register-page {
+    width: 92%;
+    max-width: 1250px;
+
+    min-height: 700px;
+
+    margin: 50px auto 75px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   REGISTER INTRO
+========================= */
+
+.register-intro {
+    padding-left: 20px;
+}
+
+.register-intro h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(65px, 7vw, 100px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin: 25px 0 35px;
+}
+
+.register-intro h1 span {
+    display: inline-block;
+
+    background: #d8e8a8;
+
+    border: 1.5px solid #111111;
+
+    padding: 0 14px 5px;
+}
+
+.register-description {
+    max-width: 450px;
+
+    color: #555555;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   REGISTER CARD
+========================= */
+
+.register-card {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 40px 45px;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    justify-self: end;
+}
+
+
+/* =========================
+   REGISTER CARD HEADING
+========================= */
+
+.register-card-heading {
+    margin-bottom: 28px;
+}
+
+.register-card-heading p {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.register-card-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   REGISTER FIELDS
+========================= */
+
+.register-field {
+    margin-bottom: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.register-field label {
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.register-field input {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 15px;
+
+    background: #fafafa;
+
+    border: 1.5px solid #111111;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Field selected */
+
+.register-field input:focus {
+    outline: none;
+
+    background: #d8e8a8;
+
+    border-color: #111111;
+}
+
+
+/* =========================
+   TERMS
+========================= */
+
+.terms {
+    margin: 5px 0 23px;
+}
+
+.terms label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #666666;
+
+    cursor: pointer;
+}
+
+.terms input {
+    width: 15px;
+
+    height: 15px;
+
+    margin-top: 2px;
+
+    accent-color: #111111;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.terms a {
+    color: #111111;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    padding: 2px 4px;
+}
+
+.terms a:hover {
+    background: #f3c7d8;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.register-submit {
+    width: 100%;
+
+    height: 52px;
+
+    border: 1.5px solid #111111;
+
+    background: #111111;
+
+    color: white;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.register-submit:hover {
+    background: #d8e8a8;
+
+    color: #111111;
+}
+
+
+/* =========================
+   ALREADY HAVE ACCOUNT
+========================= */
+
+.already-account {
+    text-align: center;
+
+    margin-top: 23px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #dddddd;
+}
+
+.already-account p {
+    font-size: 13px;
+
+    color: #666666;
+}
+
+.already-account a {
+    color: #111111;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    padding: 3px 5px;
+}
+
+.already-account a:hover {
+    background: #f3c7d8;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================
+   ACTIVE REGISTER NAV
+========================= */
+
+.register-active {
+    background: #d8e8a8;
+
+    color: #111111;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================
+   REGISTER FOOTER
+========================= */
+
+.register-footer {
+    background: white;
+
+    border-top: 1.5px solid #111111;
+
+    padding: 30px 4%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.register-footer .copyright {
+    margin: 0;
+
+    padding: 0;
+
+    border: none;
+}
+
+
+/* =========================
+   REGISTER RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .register-page {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        margin-top: 50px;
+    }
+
+    .register-intro {
+        padding-left: 0;
+    }
+
+    .register-card {
+        justify-self: start;
+
+        max-width: 600px;
+    }
+
+    .register-footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .register-page {
+        width: 94%;
+    }
+
+    .register-intro h1 {
+        font-size: 60px;
+
+        letter-spacing: -2px;
+    }
+
+    .register-card {
+        padding: 30px 25px;
+    }
+
+    .register-card-heading h2 {
+        font-size: 40px;
+    }
+
+    .register-footer {
+        padding: 30px 20px;
+    }
+}
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard {
+    width: 92%;
+    max-width: 1400px;
+    margin: 70px auto 100px;
+}
+
+
+/* =========================
+   DASHBOARD WELCOME
+========================= */
+
+.dashboard-welcome {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 55px 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 40px;
+}
+
+.dashboard-welcome h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(55px, 6vw, 85px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    margin: 20px 0 25px;
+}
+
+.dashboard-welcome h1 span {
+    display: inline-block;
+
+    background: #d8e8a8;
+
+    border: 1.5px solid #111111;
+
+    padding: 0 12px 5px;
+}
+
+.dashboard-description {
+    color: #666666;
+
+    max-width: 500px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.dashboard-main-btn {
+    text-decoration: none;
+
+    background: #111111;
+
+    color: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 14px 22px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.dashboard-main-btn:hover {
+    background: #d8e8a8;
+
+    color: #111111;
+}
+
+
+/* =========================
+   DASHBOARD STATS
+========================= */
+
+.dashboard-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 20px 0 80px;
+
+    gap: 15px;
+}
+
+.dashboard-stat {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 25px 30px;
+}
+
+.stat-number {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.dashboard-stat p {
+    color: #666666;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   DASHBOARD SECTION HEADING
+========================= */
+
+.dashboard-section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.dashboard-section-heading > div > p {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.dashboard-section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+
+    font-weight: 500;
+
+    margin-top: 8px;
+}
+
+.dashboard-section-heading > a {
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    padding: 6px 8px;
+}
+
+.dashboard-section-heading > a:hover {
+    background: #d8e8a8;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================
+   CURRENT BOOKING
+========================= */
+
+.current-booking {
+    margin-bottom: 90px;
+}
+
+.booking-card {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr 180px;
+
+    min-height: 260px;
+}
+
+.booking-car-image {
+    background: #f1eee7;
+
+    border-right: 1.5px solid #111111;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.booking-car-image span,
+.dashboard-car-image span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.booking-info {
+    padding: 30px;
+}
+
+.booking-status {
+    display: inline-block;
+
+    background: #d8e8a8;
+
+    border: 1px solid #111111;
+
+    padding: 5px 9px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.booking-info h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+}
+
+.booking-details {
+    color: #666666;
+
+    font-size: 13px;
+
+    margin-top: 8px;
+}
+
+.booking-dates {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.booking-dates span,
+.booking-price > span {
+    display: block;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 7px;
+}
+
+.booking-dates strong {
+    font-size: 13px;
+}
+
+.booking-dates p {
+    color: #666666;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+.date-arrow {
+    font-size: 20px;
+}
+
+.booking-price {
+    border-left: 1.5px solid #111111;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.booking-price strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.booking-price a {
+    color: #111111;
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    padding: 5px 7px;
+
+    width: fit-content;
+}
+
+.booking-price a:hover {
+    background: #f3c7d8;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.dashboard-cars {
+    margin-bottom: 90px;
+}
+
+.dashboard-car-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.dashboard-car-card {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    transition: 0.2s ease;
+}
+
+.dashboard-car-card:hover {
+    transform: translateY(-4px);
+}
+
+.dashboard-car-image {
+    height: 190px;
+
+    background: #f1eee7;
+
+    border-bottom: 1.5px solid #111111;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.dashboard-car-info {
+    padding: 22px;
+}
+
+.car-type {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.dashboard-car-info h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+}
+
+.car-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 22px;
+}
+
+.car-bottom span {
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.car-bottom a {
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    padding: 5px 7px;
+}
+
+.car-bottom a:hover {
+    background: #d8e8a8;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.quick-action {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 30px;
+
+    min-height: 220px;
+}
+
+.quick-action > span {
+    display: inline-block;
+
+    background: #f3c7d8;
+
+    border: 1px solid #111111;
+
+    padding: 6px 10px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+}
+
+.quick-action h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin-bottom: 8px;
+}
+
+.quick-action p {
+    color: #666666;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.quick-action a {
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    padding: 5px 7px;
+}
+
+.quick-action a:hover {
+    background: #d8e8a8;
+
+    border: 1px solid #111111;
+}
+
+
+/* =========================================================
+   CARS PAGE
+========================================================= */
+
+.cars-page {
+    width: 92%;
+
+    max-width: 1400px;
+
+    margin: 70px auto 100px;
+}
+
+
+/* =========================
+   CARS HEADER
+========================= */
+
+.cars-header {
+    margin-bottom: 65px;
+}
+
+.cars-header h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(60px, 7vw, 100px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin: 25px 0 30px;
+}
+
+.cars-header h1 span {
+    display: inline-block;
+
+    background: #d8e8a8;
+
+    border: 1.5px solid #111111;
+
+    padding: 0 14px 5px;
+}
+
+.cars-header > div > p:last-child {
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 500px;
+}
+
+
+/* =========================
+   FILTER BAR
+========================= */
+
+.car-filter-section {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.filter-label {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+}
+
+.filter-options {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+
+    border: 1px solid #111111;
+
+    padding: 8px 13px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.active-filter {
+    background: #d8e8a8;
+}
+
+.sort-section {
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.sort-section label {
+    font-size: 11px;
+
+    color: #666666;
+}
+
+.sort-section select {
+    border: 1px solid #111111;
+
+    background: white;
+
+    padding: 8px 10px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.sort-section select:focus {
+    outline: none;
+
+    background: #f3c7d8;
+}
+
+
+/* =========================
+   CARS GRID
+========================= */
+
+.cars-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================
+   CAR CARD
+========================= */
+
+.car-card {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    transition: 0.2s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   CAR IMAGE
+========================= */
+
+.car-image {
+    height: 250px;
+
+    background: #f1eee7;
+
+    border-bottom: 1.5px solid #111111;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.car-image span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.car-tag {
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    background: #f3c7d8;
+
+    border: 1px solid #111111;
+
+    padding: 6px 9px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CAR DETAILS
+========================= */
+
+.car-details {
+    padding: 25px;
+}
+
+.car-category {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.car-details h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+}
+
+.car-description {
+    color: #666666;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin: 12px 0 20px;
+
+    min-height: 38px;
+}
+
+
+/* =========================
+   CAR SPECS
+========================= */
+
+.car-specs {
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 22px;
+}
+
+.car-specs span {
+    border: 1px solid #cccccc;
+
+    padding: 5px 8px;
+
+    font-size: 10px;
+
+    color: #555555;
+}
+
+
+/* =========================
+   CAR PRICE
+========================= */
+
+.car-price-row {
+    border-top: 1px solid #dddddd;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.car-price-row strong {
+    font-size: 20px;
+}
+
+.car-price-row > div > span {
+    color: #666666;
+
+    font-size: 11px;
+}
+
+.book-car-btn {
+    text-decoration: none;
+
+    color: white;
+
+    background: #111111;
+
+    border: 1.5px solid #111111;
+
+    padding: 10px 15px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.book-car-btn:hover {
+    background: #d8e8a8;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   DASHBOARD + CARS RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .dashboard-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashboard-car-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cars-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .booking-card {
+        grid-template-columns: 220px 1fr;
+    }
+
+    .booking-price {
+        grid-column: 1 / -1;
+
+        border-left: none;
+
+        border-top: 1.5px solid #111111;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .dashboard-welcome {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 40px 30px;
+    }
+
+    .dashboard-section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .car-filter-section {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .sort-section {
+        margin-left: 0;
+    }
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard,
+    .cars-page {
+        width: 94%;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashboard-car-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 55px;
+
+        letter-spacing: -2px;
+    }
+
+    .booking-card {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-car-image {
+        height: 200px;
+
+        border-right: none;
+
+        border-bottom: 1.5px solid #111111;
+    }
+
+    .booking-price {
+        grid-column: auto;
+
+        border-left: none;
+
+        border-top: 1.5px solid #111111;
+    }
+
+    .booking-dates {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .cars-header h1 {
+        font-size: 60px;
+
+        letter-spacing: -2px;
+    }
+
+    .car-image {
+        height: 220px;
+    }
+}
+/* =====================================================
+   BOOKING PAGE
+===================================================== */
+
+.booking-page {
+    width: 92%;
+    max-width: 1200px;
+    margin: 70px auto 100px;
+}
+
+.booking-heading {
+    margin-bottom: 55px;
+}
+
+.booking-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 6vw, 90px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin: 22px 0 25px;
+}
+
+.booking-heading h1 span {
+    display: inline-block;
+    background: #d8e8a8;
+    border: 1.5px solid #111111;
+    padding: 0 14px 5px;
+}
+
+.booking-heading > p:last-child {
+    max-width: 500px;
+    line-height: 1.7;
+}
+
+
+/* BOOKING CONTAINER */
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* CAR CARD */
+
+.booking-car-card {
+    background: white;
+    border: 1.5px solid #111111;
+}
+
+.booking-car-image {
+    height: 300px;
+    background: #f3c7d8;
+    border-bottom: 1.5px solid #111111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-car-image span {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+.booking-car-details {
+    padding: 30px;
+}
+
+.car-category {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+
+.booking-car-details h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+.booking-car-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+.booking-specs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    margin-bottom: 25px;
+}
+
+
+.booking-specs div {
+    padding: 18px 10px;
+    border-right: 1px solid #111;
+}
+
+
+.booking-specs div:last-child {
+    border-right: none;
+}
+
+
+.booking-specs strong,
+.booking-specs span {
+    display: block;
+}
+
+
+.booking-specs strong {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+.booking-specs span {
+    font-size: 11px;
+    color: #777;
+}
+
+
+.booking-price span {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+.booking-price small {
+    color: #666;
+}
+
+
+/* FORM CARD */
+
+.booking-form-card {
+    background: white;
+    border: 1.5px solid #111111;
+    padding: 40px;
+}
+
+
+.form-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+
+.booking-form-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+
+.booking-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+
+.booking-field {
+    margin-bottom: 22px;
+}
+
+
+.booking-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+.booking-field input,
+.booking-field select {
+    width: 100%;
+    padding: 15px;
+    background: #f5f0e8;
+    border: 1.5px solid #111111;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+
+.booking-field input:focus,
+.booking-field select:focus {
+    background: #d8e8a8;
+}
+
+
+/* SUMMARY */
+
+.booking-summary {
+    border: 1.5px solid #111111;
+    margin: 25px 0;
+}
+
+
+.booking-summary div {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 18px;
+    border-bottom: 1px solid #111111;
+}
+
+
+.booking-summary div:last-child {
+    border-bottom: none;
+}
+
+
+.booking-summary span {
+    color: #666;
+}
+
+
+.booking-summary strong {
+    font-weight: 600;
+}
+
+
+.booking-submit {
+    width: 100%;
+    padding: 17px;
+    background: #111111;
+    color: white;
+    border: 1.5px solid #111111;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.booking-submit:hover {
+    background: #d8e8a8;
+    color: #111111;
+}
+
+
+.booking-note {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   MY BOOKINGS
+===================================================== */
+
+.my-bookings-page {
+    width: 92%;
+    max-width: 1200px;
+    margin: 70px auto 100px;
+}
+
+
+.bookings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 55px;
+}
+
+
+.bookings-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 6vw, 90px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin: 20px 0;
+}
+
+
+.bookings-header h1 span {
+    background: #d8e8a8;
+    border: 1.5px solid #111111;
+    padding: 0 12px 5px;
+}
+
+
+.bookings-header > div > p:last-child {
+    color: #555;
+}
+
+
+/* SECTION */
+
+.bookings-section {
+    margin-bottom: 60px;
+}
+
+
+.section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.section-title-row h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+
+.booking-status {
+    background: #d8e8a8;
+    border: 1.5px solid #111111;
+    padding: 8px 13px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* CURRENT BOOKING */
+
+.my-booking-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background: white;
+    border: 1.5px solid #111111;
+}
+
+
+.my-booking-image {
+    min-height: 280px;
+    background: #f3c7d8;
+    border-right: 1.5px solid #111111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.my-booking-image span,
+.past-car-image span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+.my-booking-details {
+    padding: 30px;
+}
+
+
+.my-booking-details h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+
+.booking-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+}
+
+
+.booking-info-grid div {
+    padding: 18px 12px;
+    border-right: 1px solid #111;
+}
+
+
+.booking-info-grid div:last-child {
+    border-right: none;
+}
+
+
+.booking-info-grid span,
+.booking-info-grid strong,
+.booking-info-grid small {
+    display: block;
+}
+
+
+.booking-info-grid span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin-bottom: 7px;
+}
+
+
+.booking-info-grid strong {
+    font-size: 15px;
+}
+
+
+.booking-info-grid small {
+    margin-top: 5px;
+    color: #666;
+}
+
+
+.booking-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+
+.outline-btn,
+.primary-small-btn {
+    padding: 12px 18px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.outline-btn {
+    background: white;
+    border: 1.5px solid #111111;
+}
+
+
+.outline-btn:hover {
+    background: #f3c7d8;
+}
+
+
+.primary-small-btn {
+    background: #111111;
+    color: white;
+    border: 1.5px solid #111111;
+}
+
+
+.primary-small-btn:hover {
+    background: #d8e8a8;
+    color: #111111;
+}
+
+
+/* PAST BOOKINGS */
+
+.past-bookings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.past-booking-card {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    align-items: center;
+    gap: 25px;
+    padding: 18px;
+    background: white;
+    border: 1.5px solid #111111;
+}
+
+
+.past-car-image {
+    height: 90px;
+    background: #f5f0e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #111111;
+}
+
+
+.past-booking-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.past-booking-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+.past-booking-date {
+    text-align: right;
+}
+
+
+.past-booking-date span {
+    display: block;
+    font-size: 10px;
+    color: #777;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+
+.completed-status {
+    background: #eee;
+    border: 1px solid #111111;
+    padding: 7px 10px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* BOTTOM CTA */
+
+.booking-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: 1.5px solid #111111;
+    padding: 35px;
+}
+
+
+.booking-bottom h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+
+.booking-bottom p {
+    color: #666;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-page {
+    width: 92%;
+    max-width: 1100px;
+    margin: 70px auto 100px;
+}
+
+
+.profile-header {
+    margin-bottom: 50px;
+}
+
+
+.profile-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 6vw, 90px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin: 20px 0;
+}
+
+
+.profile-header h1 span {
+    background: #d8e8a8;
+    border: 1.5px solid #111111;
+    padding: 0 12px 5px;
+}
+
+
+.profile-header > p:last-child {
+    color: #555;
+}
+
+
+/* PROFILE CONTAINER */
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+
+/* PROFILE CARD */
+
+.profile-card {
+    background: white;
+    border: 1.5px solid #111111;
+    padding: 35px;
+}
+
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #111111;
+}
+
+
+.profile-avatar {
+    width: 75px;
+    height: 75px;
+    background: #f3c7d8;
+    border: 1.5px solid #111111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+}
+
+
+.profile-name h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+.profile-name p {
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* PROFILE INFORMATION */
+
+.profile-info {
+    margin-top: 25px;
+}
+
+
+.profile-info-item {
+    padding: 17px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.profile-info-item span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin-bottom: 7px;
+}
+
+
+.profile-info-item strong {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.profile-edit-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+
+    background: #111111;
+    color: white;
+
+    border: 1.5px solid #111111;
+
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.profile-edit-btn:hover {
+    background: #d8e8a8;
+    color: #111111;
+}
+
+
+/* SETTINGS */
+
+.profile-settings {
+    background: white;
+    border: 1.5px solid #111111;
+    padding: 35px;
+}
+
+
+.profile-settings h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+
+.setting-item strong {
+    font-size: 14px;
+}
+
+
+.setting-item p {
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+.setting-item button,
+.setting-item a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    color: #111111;
+
+    border: 1.5px solid #111111;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+.setting-item button:hover,
+.setting-item a:hover {
+    background: #d8e8a8;
+}
+
+
+/* HELP */
+
+.profile-danger {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #f3c7d8;
+    border: 1.5px solid #111111;
+
+    padding: 30px;
+}
+
+
+.profile-danger h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+
+.profile-danger p {
+    color: #555;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .booking-container,
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    .my-booking-card {
+        grid-template-columns: 1fr;
+    }
+
+    .my-booking-image {
+        border-right: none;
+        border-bottom: 1.5px solid #111111;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .bookings-header {
+        display: block;
+    }
+
+    .bookings-header .primary-btn {
+        display: inline-block;
+        margin-top: 25px;
+    }
+
+    .booking-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .past-booking-card {
+        grid-template-columns: 90px 1fr;
+    }
+
+    .completed-status {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .booking-page,
+    .my-bookings-page,
+    .profile-page {
+        width: 90%;
+        margin-top: 45px;
+    }
+
+    .booking-form-card,
+    .booking-car-details,
+    .profile-card,
+    .profile-settings {
+        padding: 25px;
+    }
+
+    .booking-specs {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-specs div {
+        border-right: none;
+        border-bottom: 1px solid #111111;
+    }
+
+    .booking-specs div:last-child {
+        border-bottom: none;
+    }
+
+    .booking-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-info-grid div {
+        border-right: none;
+        border-bottom: 1px solid #111111;
+    }
+
+    .booking-info-grid div:last-child {
+        border-bottom: none;
+    }
+
+    .booking-actions {
+        flex-direction: column;
+    }
+
+    .booking-actions button {
+        width: 100%;
+    }
+
+    .past-booking-card {
+        grid-template-columns: 1fr;
+    }
+
+    .past-booking-info {
+        display: block;
+    }
+
+    .past-booking-date {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .booking-bottom,
+    .profile-danger {
+        display: block;
+    }
+
+    .booking-bottom .secondary-btn,
+    .profile-danger button {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+}
+/* =====================================================
+   SIMPLE ABOUT PAGE
+===================================================== */
+
+.simple-about {
+    width: 92%;
+    max-width: 1200px;
+    margin: 75px auto 100px;
+}
+
+
+/* ================= HEADING ================= */
+
+.about-heading {
+    padding-bottom: 70px;
+}
+
+
+.about-heading h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(60px, 8vw, 105px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin-top: 25px;
+}
+
+
+.about-heading h1 span {
+    display: inline-block;
+
+    background: #d8e8a8;
+
+    border: 1.5px solid #111111;
+
+    padding: 0 14px 5px;
+}
+
+
+/* ================= ABOUT INFO ================= */
+
+.about-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    border-top: 1.5px solid #111111;
+
+    padding-top: 30px;
+}
+
+
+.about-description,
+.contact-card {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 40px;
+}
+
+
+.about-description h2,
+.contact-card h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    margin: 15px 0 25px;
+}
+
+
+.about-description p {
+    max-width: 550px;
+
+    color: #555;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+
+.contact-item span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #777;
+}
+
+
+.contact-item strong {
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* ================= BOTTOM CTA ================= */
+
+.about-bottom {
+    margin-top: 30px;
+
+    padding: 45px 50px;
+
+    background: #f3c7d8;
+
+    border: 1.5px solid #111111;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.about-bottom h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-top: 15px;
+}
+
+
+.about-bottom h2 span {
+    background: white;
+
+    border: 1.5px solid #111111;
+
+    padding: 0 10px 4px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 750px) {
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .simple-about {
+        width: 90%;
+
+        margin-top: 50px;
+    }
+
+
+    .about-heading {
+        padding-bottom: 50px;
+    }
+
+
+    .about-heading h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .about-description,
+    .contact-card {
+        padding: 30px;
+    }
+
+
+    .about-bottom {
+        padding: 30px;
+    }
+
+}

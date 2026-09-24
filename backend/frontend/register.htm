@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | DriveEase</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Drive<span>Ease</span>
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.htm">
+                Home
+            </a>
+
+            <a href="cars.htm">
+                Cars
+            </a>
+
+            <a href="my_bookings.htm">
+                My Bookings
+            </a>
+
+            <a href="about.htm">
+                About
+            </a>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <a href="login.htm" class="login-btn">
+                Login
+            </a>
+
+            <a href="register.htm" class="register-btn register-active">
+                Register
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= REGISTER PAGE ================= -->
+
+    <main class="register-page">
+
+
+        <!-- Left Side -->
+
+        <div class="register-intro">
+
+            <p class="small-heading">
+                JOIN DRIVE EASE.
+            </p>
+
+            <h1>
+                Start your<br>
+                <span>journey.</span>
+            </h1>
+
+            <p class="register-description">
+                Create your DriveEase account and make
+                your next car rental simple, flexible and
+                stress-free.
+            </p>
+
+        </div>
+
+
+
+        <!-- Register Card -->
+
+        <div class="register-card">
+
+            <div class="register-card-heading">
+
+                <p>
+                    CREATE ACCOUNT
+                </p>
+
+                <h2>
+                    Sign up
+                </h2>
+
+            </div>
+
+
+            <form onsubmit="registerUser(event)">
+
+    <div class="register-field">
+
+        <label for="name">
+            Full Name
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+        >
+
+    </div>
+
+
+    <div class="register-field">
+
+        <label for="email">
+            Email Address
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+    </div>
+
+
+    <div class="register-field">
+
+        <label for="password">
+            Password
+        </label>
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            required
+        >
+
+    </div>
+
+
+    <div class="register-field">
+
+        <label for="confirm-password">
+            Confirm Password
+        </label>
+
+        <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Confirm your password"
+            required
+        >
+
+    </div>
+
+
+    <div class="terms">
+
+        <label>
+
+            <input
+                type="checkbox"
+                required
+            >
+
+            <span>
+                I agree to the
+                <a href="#">Terms & Conditions</a>
+            </span>
+
+        </label>
+
+    </div>
+
+
+    <button
+        type="submit"
+        class="register-submit"
+    >
+        Create Account →
+    </button>
+
+</form>
+
+
+            <!-- Login -->
+
+            <div class="already-account">
+
+                <p>
+                    Already have an account?
+                    <a href="login.htm">
+                        Login
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="register-footer">
+
+        <div class="footer-logo">
+            Drive<span>Ease</span>
+        </div>
+
+        <p>
+            Simple rentals. Better journeys.
+        </p>
+
+        <p class="copyright">
+            © 2026 DriveEase. All rights reserved.
+        </p>
+
+    </footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

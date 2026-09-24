@@ -1,0 +1,7 @@
+Download mysql-connector-j-<version>.jar and place it in this folder.
+
+Direct link (version 8.3.0, works with MySQL 8):
+https://repo.maven.apache.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0.jar
+
+Or get the latest from https://dev.mysql.com/downloads/connector/j/
+(choose "Platform Independent", unzip, and copy the .jar from inside).

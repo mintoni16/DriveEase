@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cars | DriveEase</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Drive<span>Ease</span>
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.htm">
+                Dashboard
+            </a>
+
+            <a href="cars.htm" class="active">
+                Cars
+            </a>
+
+            <a href="my_bookings.htm">
+                My Bookings
+            </a>
+
+            <a href="about.htm">
+                About
+            </a>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <a href="profile.htm" class="profile-link">
+                Profile
+            </a>
+
+            <a href="#" class="register-btn" onclick="logout()">
+    Logout
+</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= CARS HEADER ================= -->
+
+    <main class="cars-page">
+
+        <section class="cars-header">
+
+            <div>
+
+                <p class="small-heading">
+                    OUR FLEET
+                </p>
+
+                <h1>
+                    Find your<br>
+                    <span>perfect ride.</span>
+                </h1>
+
+                <p>
+                    Choose from our collection of comfortable,
+                    reliable and stylish cars.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FILTER BAR ================= -->
+
+        <section class="car-filter-section">
+
+            <div class="filter-label">
+                FILTER BY
+            </div>
+
+
+            <div class="filter-options">
+
+                <button class="filter-btn active-filter">
+                    All Cars
+                </button>
+
+                <button class="filter-btn">
+                    Hatchback
+                </button>
+
+                <button class="filter-btn">
+                    Sedan
+                </button>
+
+                <button class="filter-btn">
+                    SUV
+                </button>
+
+                <button class="filter-btn">
+                    Luxury
+                </button>
+
+            </div>
+
+
+            <div class="sort-section">
+
+                <label for="sort">
+                    Sort
+                </label>
+
+                <select id="sort">
+
+                    <option>
+                        Recommended
+                    </option>
+
+                    <option>
+                        Price: Low to High
+                    </option>
+
+                    <option>
+                        Price: High to Low
+                    </option>
+
+                    <option>
+                        Name
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CAR GRID ================= -->
+
+        <section class="cars-grid">
+<p class="cars-status">Loading cars…</p>
+</section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Drive<span>Ease</span>
+        </div>
+
+        <p>
+            Simple rentals. Better journeys.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="dashboard.htm">
+                Dashboard
+            </a>
+
+            <a href="cars.htm">
+                Cars
+            </a>
+
+            <a href="my_bookings.htm">
+                Bookings
+            </a>
+
+            <a href="about.htm">
+                About
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 DriveEase. All rights reserved.
+        </p>
+
+    </footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

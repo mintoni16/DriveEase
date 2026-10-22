@@ -1,0 +1,16 @@
+flowchart TD
+    A[User submits booking form] --> B{User logged in?}
+    B -- No --> C[Return 401 login required]
+    B -- Yes --> D[Validate car, locations and dates]
+    D --> E{Dates and inputs valid?}
+    E -- No --> F[Return 400 validation error]
+    E -- Yes --> G[Begin JDBC transaction]
+    G --> H[Lock active car row]
+    H --> I{Car exists and is active?}
+    I -- No --> J[Roll back and return 404]
+    I -- Yes --> K[Check overlapping confirmed bookings]
+    K --> L{Overlap found?}
+    L -- Yes --> M[Roll back and return 409]
+    L -- No --> N[Calculate total and insert booking]
+    N --> O[Commit transaction]
+    O --> P[Return saved booking]

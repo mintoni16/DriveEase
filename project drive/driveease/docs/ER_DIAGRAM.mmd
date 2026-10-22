@@ -1,0 +1,43 @@
+erDiagram
+    USERS ||--o{ BOOKINGS : places
+    USERS ||--o{ SESSIONS : owns
+    CARS ||--o{ BOOKINGS : reserved_for
+
+    USERS {
+        int id PK
+        varchar name
+        varchar email UK
+        varchar phone
+        varchar password_hash
+        datetime created_at
+    }
+    CARS {
+        int id PK
+        varchar name
+        varchar category
+        text description
+        int seats
+        varchar transmission
+        varchar fuel
+        int price_per_day
+        boolean popular
+        boolean active
+    }
+    BOOKINGS {
+        int id PK
+        int user_id FK
+        int car_id FK
+        date pickup_date
+        date return_date
+        varchar pickup_location
+        varchar drop_location
+        int total_price
+        enum status
+        datetime created_at
+    }
+    SESSIONS {
+        char token_hash PK
+        int user_id FK
+        datetime expires_at
+        datetime created_at
+    }

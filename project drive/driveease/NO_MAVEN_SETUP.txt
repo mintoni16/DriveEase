@@ -1,0 +1,26 @@
+DRIVEEASE - RUN WITHOUT INSTALLING MAVEN (Windows)
+
+This package compiles the Java source using javac from your installed JDK. Maven is not needed.
+You still need:
+  1. JDK 17 or later (includes java and javac)
+  2. MySQL Server running locally
+  3. MySQL Connector/J JDBC driver JAR in the lib folder
+
+STEPS
+1. Download MySQL Connector/J 8.4.0 from the official MySQL Connector/J download page:
+   https://dev.mysql.com/downloads/connector/j/
+   Choose the Platform Independent ZIP archive.
+2. Extract it and copy mysql-connector-j-8.4.0.jar into this project's lib folder.
+   Final path: driveease\lib\mysql-connector-j-8.4.0.jar
+3. Start MySQL Server. In MySQL Workbench, you may run:
+   CREATE DATABASE IF NOT EXISTS driveease;
+   The app can create the database through its JDBC URL if the configured user has permission.
+4. Double-click RUN_DRIVEEASE.bat. On the first run it creates config.properties and opens it in Notepad.
+5. Set db.user and db.password to your local MySQL credentials. Save and close Notepad.
+6. Double-click RUN_DRIVEEASE.bat again. When it says DriveEase running at http://localhost:5000, open that URL.
+7. Keep the console window open while using the app. Press Ctrl+C to stop it.
+
+TROUBLESHOOTING
+- If java or javac is not recognized, install a JDK 17+ and configure PATH/JAVA_HOME.
+- If MySQL login fails, verify MySQL Server is running and credentials in config.properties.
+- Do not share config.properties because it contains your database password.
